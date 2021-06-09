@@ -19,5 +19,6 @@ git clone https://github.com/rodri-jara/dotfiles.git
 ln -s dotfiles/bashrc .bashrc
 ln -s dotfiles/bashrc .zsh # you can use one bashrc file to generate both .bashrc and .zshrc
 ln -s dotfiles/vimrc .vimrc
+ln -s dotfiles/tmux.conf .tmux.conf
 ```
 
