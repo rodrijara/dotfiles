@@ -4,6 +4,8 @@ PROMPT="%F{025}%n%f%F{241}@%m:%f %F{029}%~%f${NEWLINE}$ "
 export HOST=$(hostname)
 
 alias ll='ls -lF'
+alias grep='grep -E'
+alias sed='sed -E'
 
 export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
