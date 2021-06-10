@@ -17,18 +17,23 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-dispatch'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'ctrlpvim/ctrlp.vim'
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'christoomey/vim-tmux-runner'
+Plugin 'tomasiser/vim-code-dark'
 
 call vundle#end()
 filetype plugin indent on    " required
 
-set background=light
-colorscheme PaperColor
 
+" set background=light
+" colorscheme PaperColor
+set background=dark
+colorscheme codedark
+
+let g:airline_theme = 'codedark'
 let mapleader = ','
 
 map <Leader>t :call RunCurrentSpecFile()<CR>
