@@ -41,3 +41,8 @@ autocmd VimResized * :wincmd =
 " zoom a vim pane, <C-w>= to re-balance
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>p
+
+
+imap <c-q> <ESC>
+nmap <c-q> <ESC>
+
