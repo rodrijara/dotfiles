@@ -9,15 +9,15 @@ If you want to reproduce these setups into your sytem, follow these steps:
 
 1. Clone this repo into your `home`dir:
 ```shell
-cd # go home 
+cd ~ # go home 
 git clone https://github.com/rodri-jara/dotfiles.git
 ```
 
 2. Now that you have the `dotfiles` folder inside your `home` directory, you can generate the symlinks:
 
 ```shell
-ln -s dotfiles/bashrc .bashrc
-ln -s dotfiles/bashrc .zsh # you can use one bashrc file to generate both .bashrc and .zshrc
+cd ~ # make sure you move to home dir!
+ln -s dotfiles/zshrc .zshr
 ln -s dotfiles/vimrc .vimrc
 ln -s dotfiles/tmux.conf .tmux.conf
 ```
