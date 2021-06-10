@@ -8,14 +8,14 @@ They are name like that because of the leading `.` and they are hidden on your f
 If you want to reproduce these setups into your sytem, follow these steps:
 
 1. Clone this repo into your `home`dir:
-```shell
+```zsh
 cd ~ # go home 
 git clone https://github.com/rodri-jara/dotfiles.git
 ```
 
 2. Now that you have the `dotfiles` folder inside your `home` directory, you can generate the symlinks:
 
-```shell
+```zsh
 cd ~ # make sure you move to home dir!
 ln -s dotfiles/zshrc .zshr
 ln -s dotfiles/vimrc .vimrc
