@@ -1,7 +1,8 @@
-" command! Navbar vsplit ./ 
+"ucomman! Navbar vsplit ./ 
 set number relativenumber
 set cursorline
 set shiftwidth=4
+set tabstop=4
 set autoindent
 
 filetype off                  " required
@@ -25,6 +26,13 @@ Plugin 'christoomey/vim-tmux-runner'
 Plugin 'tomasiser/vim-code-dark'
 
 call vundle#end()
+
+call plug#begin()
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'vim-scripts/vim-auto-save'
+call plug#end()
+
 filetype plugin indent on    " required
 
 
@@ -35,6 +43,10 @@ colorscheme codedark
 
 let g:airline_theme = 'codedark'
 let mapleader = ','
+
+" let g:auto_save = 1  " enable AutoSave on Vim startup
+" let g:auto_save_silent = 1  " do not display the auto-save notification
+" let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
 
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
@@ -47,7 +59,26 @@ autocmd VimResized * :wincmd =
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>p
 
-
+" remap escape to Ctrl-q
 imap <c-q> <ESC>
 nmap <c-q> <ESC>
+
+" Automatically closing braces
+
+" inoremap {<CR> {<CR>}<Esc>ko
+" inoremap [<CR> [<CR>]<Esc>ko
+" inoremap (<CR> (<CR>)<Esc>ko
+
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
+function! RunGoInTerminal(filename)
+    let s:gocommand = 'VtrSendCommandToRunner go run' . a:filename
+    return s:gocommand
+endfunction
+
+let s:filename = expand('%p')
+
+command! Rungo call RunGoInTerminal(s:filename)
+
 
