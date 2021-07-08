@@ -17,7 +17,7 @@ git clone https://github.com/rodri-jara/dotfiles.git
 
 ```zsh
 cd ~ # make sure you move to home dir!
-ln -s dotfiles/zshrc .zshr
+ln -s dotfiles/zshrc .zshrc
 ln -s dotfiles/vimrc .vimrc
 ln -s dotfiles/tmux.conf .tmux.conf
 ```
