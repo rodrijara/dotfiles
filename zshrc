@@ -1,14 +1,26 @@
 
 # GLOBAL variables
-export HOST=$(hostname)
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
-export CLICOLOR=1
-export LSCOLORS=gxfxcxdxbxegedabagacad
+# export HOST=$(hostname)
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+# ls colors: https://gist.github.com/zanshin/4848f55ef103ac039531
+CLICOLOR=1 # enable
+# Order:
+# 1. directory, 2. symbolic link, 3. socket, 4. pipe, 5. executable, 6. block special, 7. character special
+# 8. executabel with setuid bit set, 9. executable with setgid bit set, 10. directory writable to others, with sticky bit
+# 11. directory writable to others, without sticky bit
+#
+# Colors
+# a - black, b - red, c - green, d - brown (yellow), e - blue, f - magenta, g - cyan, h - light grey
+# A - Bold black, B - Bold red, C - Bold green, D - Bold brown (yellow), E - Bold blue, F - Bold Magenta, G - Bold cyan,
+# H - Bold light grey (appears bright white), x - default color
+export CLICOLOR LSCOLORS=gxfxcxdxbxegedabagacad
+
 export GREP_COLOR='38;5;35'
 
 # ALIASES
 alias runtmux='~/repos/dotfiles/runtmux'
-alias so='source ~/.zshrc'
+alias reload='source ~/.zshrc'
 alias ll='ls -lF'
 alias grep='grep --color=auto -E'
 alias sed='sed -E'
@@ -48,8 +60,7 @@ zstyle ':vcs_info:git:*' formats '[ on %b ]'
 # set prompt with branch info
 setopt PROMPT_SUBST
 #PROMPT="%F{025}%n%f %F{241}@ %m:%f %F{029}%~%f${NEWLINE}$ "
-PROMPT="%F{025}%n%f%F{241}@%m:%f %F{029}%~%f
-$ "
+PROMPT="%F{025}%n%f%F{241}@%m:%f %F{029}%~%f$ "
 
 # GIT shortcuts
 g() {
