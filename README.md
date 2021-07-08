@@ -5,20 +5,14 @@ This repository holds the dotfiles I use for setting up my tools.
 
 They are name like that because of the leading `.` and they are hidden on your file system. 
 
-If you want to reproduce these setups into your sytem, follow these steps:
-
-1. Clone this repo into your `home`dir:
-```zsh
-cd ~ # go home 
-git clone https://github.com/rodri-jara/dotfiles.git
+If you want to reproduce these setups into your sytem, clone this repo o copy/paste the files into your filesystem and generate symlinks:
+```shell
+ln -s SOURCE_FILE TARGET_FILE
 ```
-
-2. Now that you have the `dotfiles` folder inside your `home` directory, you can generate the symlinks:
-
-```zsh
+```shell
 cd ~ # make sure you move to home dir!
-ln -s dotfiles/zshrc .zshrc
-ln -s dotfiles/vimrc .vimrc
-ln -s dotfiles/tmux.conf .tmux.conf
+ln -s path/to/file/zshrc $HOME/.zshrc
+ln -s path/to/file/vimrc $HOME/.vimrc
+ln -s path/to/file/tmux.conf $HOME/.tmux.conf
 ```
-
+Now you have these dotfiles into your $HOME dir, you need to source your .zshrc with `source .zshrc` or restart your terminal and you will see the changes.
