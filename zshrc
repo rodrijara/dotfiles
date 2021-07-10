@@ -55,12 +55,12 @@ RPROMPT=\$vcs_info_msg_0_
 
 
 # format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git:*' formats '[ on %b ]'
+zstyle ':vcs_info:git:*' formats '[ @%b ]'
 
 # set prompt with branch info
 setopt PROMPT_SUBST
 #PROMPT="%F{025}%n%f %F{241}@ %m:%f %F{029}%~%f${NEWLINE}$ "
-PROMPT="%F{025}%n%f%F{241}@%m:%f %F{029}%~%f$ "
+PROMPT="%F{025}%n%f%F{241} %m%f %F{029}%2d%f $ "
 
 # GIT shortcuts
 g() {
