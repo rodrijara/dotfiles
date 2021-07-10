@@ -60,7 +60,7 @@ zstyle ':vcs_info:git:*' formats '[ @%b ]'
 # set prompt with branch info
 setopt PROMPT_SUBST
 #PROMPT="%F{025}%n%f %F{241}@ %m:%f %F{029}%~%f${NEWLINE}$ "
-PROMPT="%F{025}%n%f%F{241} %m%f %F{029}%2d%f $ "
+PROMPT="%F{025}%n%f%F{241} %m%f %F{029}%~%f $ "
 
 # GIT shortcuts
 g() {
