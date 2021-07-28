@@ -1,9 +1,9 @@
 # Dotfiles
 This repository holds the dotfiles I use for setting up my tools.
 
-**Dotfiles** are the typical UNIX configuration files used for customization of programs like the shell `.bashrc`/`.zsh` or vim editors `.vimrc`.
+**Dotfiles** are the typical UNIX configuration files used for customization of programs like the shell (`.bashrc`/`.zsh`) or vim editors (`.vimrc`).
 
-They are name like that because of the leading `.` and they are hidden on your file system. 
+They are named like that because of the leading `.` and they are hidden on your file system. 
 
 If you want to reproduce these setups into your sytem, clone this repo o copy/paste the files into your filesystem and generate symlinks:
 
